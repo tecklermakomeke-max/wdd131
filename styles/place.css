@@ -1,0 +1,126 @@
+*/ Paris flag colors */
+:root {
+    --blue: #0055a4;
+    --white: #FFFFFF;
+    --Red: #EF4135;
+    --text-dark: #000
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Roboto;
+    color: #000;
+    background-color: #FFFFFF;
+    line-height: 1.6;
+}
+header {
+    background: linear-gradient(to right(#0055a4), (#FFFFFF), (#EF4135));
+    padding: 1rem;
+    text-align: center;
+    text-shadow: 1px 1px 2px #000;
+    border-bottom: 8px solid #EF4135;
+
+}
+header h1 {
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px #000;
+}
+/* MOBILE: normal flow */
+.hero {
+    position: static;
+}
+.hero  picture img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.data, .weather {
+    background-color: #FFFFFF;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.data h2, .weather h2 {
+    background-color: #0055a4;
+    color: white;
+    padding: 0.75rem;
+    margin: -1rem -1rem 1rem -1rem;
+    border-radius: 8px 8px 0 0;
+    font-size: 1.5rem;
+}
+.data p, .data p {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3rem 0;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.data span, .weather span {
+    font-weight: bold;
+}
+footer {
+    background-color: #0055a4;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    border-top: 8px solid #0055a4;
+    position: static;
+    width: 100%;
+}
+.weather-icon-mobile {
+    width: 80px;
+    height: 80px;
+    margin: 0.5rem auto;
+    display: block;
+}
+footer {
+    background-color: #0055a4;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    border-top: 8px solid #EF4135;
+    margin-top: 1rem;
+}
+footer p {
+    margin: 0.5rem 0;
+}
+/* WIDER VIEW = frame 2 - 700px and up  */
+@media  screen and (min-width: 700px) {
+    .hero {
+        position: relative;
+    }
+    .data, .weather {
+        position: absolute;
+        width: 300px;
+        background-color: rgba(255, 255, 255, 0.93);
+        box-shadow: 0 4px  20px #000;
+        text-align: left;
+        margin: 0;
+    }
+    .data, .weather p {
+        justify-content: space-between;
+        max-width: 100%;
+    }
+    .data {
+        top: 30px;
+        left: 30px;
+    }
+    .weather {
+        bottom: 30px;
+        right: 30px;
+    }
+    /* Pseudo-element for wider view icon*/
+    .weather h2::after {
+        content: "🌥️";
+        font-size: 1.8rem;
+        float: right;
+    }
+    .weather-icon-mobile {
+        display: none; 
+    }
+}
