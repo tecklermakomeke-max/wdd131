@@ -16,9 +16,10 @@ img {
     display: block;
     width: 300px;
     height: 500px;
-    margin: 20px;
+    margin: 20px auto;
     background-color: black;
     animation: fadeln 1.5s ease-in;
+    background-image: #333;
 }
 @keyframes fadeln {
     from {opacity: 0;}
