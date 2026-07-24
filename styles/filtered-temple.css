@@ -1,0 +1,100 @@
+* { 
+    margin: 0;
+     padding: 0; 
+     box-sizing: border-box; 
+     font-family: Roboto;
+    }
+body {
+    background-color: #f4f4f4;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+
+}
+header {
+    background-color: #4a148c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+nav {
+    display: none;
+    nav.open {
+        display: block;
+        padding: 1rem;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+    }
+}
+.navigation {
+    list-style: none;
+}
+.navigation a{
+    display: block;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+.navigation a:hover {
+    background-color: white;
+    color: #4a148c;
+}
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+h2 {
+    text-align: center;
+    margin: 1rem;
+}
+.temple-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+.temple-gallery section {
+    background-color: #71697a;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    text-align: center;
+}
+.temple-gallery h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+.temple-gallery span {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+.temple-gallery p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+.temple-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-top: 0.5rem;
+}
+figure figcaption {
+    text-align: center;
+    padding: 0.5rem;
+}
+footer {
+    background-color: #4a148c;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: 20px;
+}

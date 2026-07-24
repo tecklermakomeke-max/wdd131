@@ -1,6 +1,6 @@
-// footer: year + Last Modified
-const yearSpan = document.querySelector("#year");
-const lastModified = document.querySelector("#lastModified");
+// set up  current year and Last Modified date
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = document.lastModified;
 yearSpan.textContent = new Date().getFullYear();
 lastMod.textContent = 'Last Modification: ${document.lastModified}';
 const menuButton = document.querySelector('#menu');
