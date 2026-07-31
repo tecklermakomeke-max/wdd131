@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Review</title>
+  <meta name="description" content="Thank you for submitting your Review">
+  <meta name="author" content="Teckler N Makomeke">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatics.com" crossorigin=>"
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Product Review</h1>
+  </header>
+
+  <main>
+    <form method="get" action="review.html">
+      
+      <!-- Product Name -->
+      <label for="productName">Product Name</label>
+      <select id="productName" name="productName" required>
+        <option value="" disabled selected>Choose a Product ...</option>
+        <!-- JS will add the rest here -->
+      </select>
+
+      <!-- Overall Rating -->
+      <fieldset>
+        <legend>Overall Rating</legend>
+        <div class="rating">
+          <label><input type="radio" id="star1" name="rating" value="1" required>&star;</label>
+          <label><input type="radio" id="star2" name="rating" value="2">&star;&star;</label>
+          <label><input type="radio" id="star3" name="rating" value="3">&star;&star;&star;</label>
+          <label><input type="radio" id="star4" name="rating" value="4">&star;&star;&star;&star;</label>
+          <label><input type="radio" id="star5" name="rating" value="5">&star;&star;&star;&star;&star;</label>
+        </div>
+      </fieldset>
+
+      <!-- Date of Installation -->
+      <label for="installDate">Date of Installation</label>
+      <input type="date" id="installDate" name="installDate" required>
+
+      <!-- Useful Features -->
+      <fieldset>
+        <legend>Which features did you find useful in the product? <i>(Check all that apply)</i></legend>
+        <label><input type="checkbox" id="durability" name="features" value="Durability"> Durability</label>
+        <label><input type="checkbox" id="ease" name="features" value="Ease of Use"> Ease of Use</label>
+        <label><input type="checkbox" id="performance" name="features" value="Performance"> Performance</label>
+        <label><input type="checkbox" id="design" name="features" value="Design"> Design</label>
+      </fieldset>
+
+      <!-- Written Review -->
+      <label for="review">Written Review <span class="optional">(Optional)</span></label>
+      <textarea id="review" name="review" rows="4"></textarea>
+
+      <!-- Your Name -->
+      <label for="userName">Your Name <span class="optional">(Optional)</span></label>
+      <input type="text" id="userName" name="userName">
+
+      <!-- Submit Button -->
+      <input type="submit" value="Post Review">
+
+    </form>
+  </main>
+
+  <footer>
+    <p>©2026 | Teckler N Makomeke | <br>
+    South Africa <br>
+    Last Modification: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>

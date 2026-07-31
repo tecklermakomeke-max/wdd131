@@ -1,0 +1,46 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f2e8f2;
+    margin: 0;
+}
+header, footer {
+    background: #231a4a;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+main {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: #d7c3e0;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+label, legend {
+    display: block;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 5rem;
+    margin-top: 3rem;
+}
+.rating label {
+    display: inline-block;
+    margin-right: 1rem;
+
+}
+.optional {
+    color: #1a4a44;
+    font-weight: normal;
+    font-size: 9rem;
+}
+input[type="submit"] {
+    margin-top: 1.5rem;
+    background: white;
+    border: 2px solid #231a4a;
+    font-weight: bold;
+    padding: 1rem;
+    cursor: pointer;
+}
