@@ -3,24 +3,24 @@ document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
 // 1. Arrays + Objects - 3 wrestlers with descriptions
 const wrestlers = [
+   {
+    name: "Roman Reigns", 
+    move: "Spear",
+    bio: "Roman Reigns is 'The Tribal Chief'. He was World Champion for over 1000 days. He leads his family in WWE.",
+    img: "images/roman-reigns.jpg"
+  },
   {
     name: "Becky Lynch", 
     move: "Dis-Arm-Her",
     bio: "Becky Lynch is 'The Man'. She is a 6 time World Champion. Fans love her because she is tough and never gives up.",
-    img: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=400"
+    img: "images/becky-lynch.jpg"
   },
   {
     name: "John Cena", 
     move: "Attitude Adjustment",
     bio: "John Cena says 'You Can't See Me'. He was World Champion 16 times. He also helps kids through Make-A-Wish.",
-    img: "https://images.unsplash.com/photo-1594737625785-a6c3ddab4dd8?w=400"
+    img: "images/john-cena.jpg"
   },
-  {
-    name: "Roman Reigns", 
-    move: "Spear",
-    bio: "Roman Reigns is 'The Tribal Chief'. He was World Champion for over 1000 days. He leads his family in WWE.",
-    img: "https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=400"
-  }
 ];
 
 // 2. Show wrestlers on the page - DOM
