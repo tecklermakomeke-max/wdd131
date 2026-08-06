@@ -1,0 +1,135 @@
+/* 0. Reset + Validation Fix */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.heading-font {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #C41E3A;
+}
+.body-font {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+header, footer {
+  background-color: #1E1E1E;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+header h1 {
+  font-family: 'Arial', sans-serif;
+  color: #C41E3A;
+  font-size: 2rem;
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+main section {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+h2 {
+  font-family: 'Arial', sans-serif;
+  color: #C41E3A;
+  border-bottom: 2px solid #C41E3A;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-family: 'Arial', sans-serif;
+  color: #1E1E1E;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.color-swatch {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 3px;
+  color: white;
+}
+.primary { background-color: #C41E3A; }
+.secondary { background-color: #1E1E1E; }
+.accent { background-color: #F5F5F5; color: #333; border: 1px solid #ccc; }
+
+.wireframe-mobile, .wireframe-desktop {
+  border: 2px solid #1E1E1E;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+.wireframe-mobile { 
+  width: 200px; 
+}
+
+.wireframe-desktop { 
+  width: 100%;
+  max-width: 500px; 
+}
+
+.wireframe-mobile .header, 
+.wireframe-desktop .header {
+  background: #C41E3A;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.wireframe-mobile .footer, 
+.wireframe-desktop .footer {
+  background: #1E1E1E;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.wireframe-mobile .nav, 
+.wireframe-mobile .content,
+.wireframe-desktop .content, 
+.wireframe-desktop .sidebar {
+  background: #F5F5F5;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px dashed #999;
+}
+
+.wireframe-desktop .desktop-body {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.wireframe-desktop .content {
+  flex: 2;
+}
+
+.wireframe-desktop .sidebar {
+  flex: 1;
+}
