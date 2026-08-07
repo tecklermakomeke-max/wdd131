@@ -19,34 +19,34 @@ if (factBtn) {
   });
 }
 
-// Load Wrestlers - wrestlers.html
+// Load Wrestlers - wrestlers.html WITH LAZY LOADING
 const wrestlerList = document.getElementById('wrestlerList');
 if (wrestlerList) {
   const wrestlers = [
     {
       name: "Roman Reigns",
-      image: "images/roman-reigns.jpg",
       bio: "The Tribal Chief and current face of WWE. Multiple time world champion.",
-      finisher: "Spear"
+      finisher: "Spear",
+      image: "images/roman-reigns.jpg"
     },
     {
       name: "Becky Lynch",
-      image: "images/becky-lynch.jpg",
       bio: "The Man. First woman to main event WrestleMania and multi-time champion.",
-      finisher: "Dis-arm-her"
+      finisher: "Dis-arm-her",
+      image: "images/becky-lynch.jpg"
     },
     {
       name: "John Cena",
-      image: "images/john-cena.jpg",
       bio: "16-time world champion and wrestling legend. You can't see him.",
-      finisher: "Attitude Adjustment"
+      finisher: "Attitude Adjustment",
+      image: "images/john-cena.jpg"
     }
   ];
 
   wrestlers.forEach(w => {
     wrestlerList.innerHTML += `
       <div class="card">
-        <img src="${w.image}" alt="${w.name}">
+        <img src="${w.image}" alt="${w.name}" loading="lazy" width="300" height="600">
         <h3>${w.name}</h3>
         <p><b>Bio:</b> ${w.bio}</p>
         <p><b>Finishing Move:</b> ${w.finisher}</p>
