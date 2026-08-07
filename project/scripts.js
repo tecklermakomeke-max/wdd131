@@ -46,7 +46,7 @@ if (wrestlerList) {
   wrestlers.forEach(w => {
     wrestlerList.innerHTML += `
       <div class="card">
-        <img src="${w.image}" alt="${w.name}" loading="lazy" width="300" height="600">
+        <img src="${w.image}" alt="${w.name}" loading="lazy" width="300" height="300">
         <h3>${w.name}</h3>
         <p><b>Bio:</b> ${w.bio}</p>
         <p><b>Finishing Move:</b> ${w.finisher}</p>
