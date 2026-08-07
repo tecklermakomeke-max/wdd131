@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrestling - Fan Club</title>
+    <meta name="description" content="Join the Wrestling Fan Club to get updates, exclusive facts, and news about professional wrestling.">
+    <meta name="author" content="Teckler N Makomeke">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Wrestling</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="wrestlers.html">Wrestlers</a>
+            <a href="fanclub.html" class="active">Fan Club</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Join the Wrestling Fan Club</h2>
+        <p>Sign up to get weekly wrestling facts, match results, and updates about your favorite wrestlers like Roman Reigns, Becky Lynch, and John Cena.</p>
+
+        <form id="fanclubForm">
+            <label>Name: <input type="text" id="fanName" name="name" required></label>
+            <label>Email: <input type="email" id="fanEmail" name="email" required></label>
+            <label>Favorite Wrestler: 
+                <select id="favoriteWrestler" name="favorite">
+                    <option value="">Choose one</option>
+                    <option value="Roman Reigns">Roman Reigns</option>
+                    <option value="Becky Lynch">Becky Lynch</option>
+                    <option value="John Cena">John Cena</option>
+                    <option value="Other">Other</option>
+                </select>
+            </label>
+            <button type="submit">Join Now</button>
+        </form>
+        <p id="fanMessage"></p>
+    </main>
+    <footer>.
+        <p><a href="references.html">References</a></p>
+        <p>&copy; <span id="year"></span> | Teckler N Makomeke | Wrestling Website</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>

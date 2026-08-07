@@ -2,64 +2,79 @@
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
 // 1. Arrays + Objects - 3 wrestlers with descriptions
-const wrestlers = [
-   {
-    name: "Roman Reigns", 
-    move: "Spear",
-    bio: "Roman Reigns is 'The Tribal Chief'. He was World Champion for over 1000 days. He leads his family in WWE.",
-    img: "images/roman-reigns.jpg"
-  },
-  {
-    name: "Becky Lynch", 
-    move: "Dis-Arm-Her",
-    bio: "Becky Lynch is 'The Man'. She is a 6 time World Champion. Fans love her because she is tough and never gives up.",
-    img: "images/becky-lynch.jpg"
-  },
-  {
-    name: "John Cena", 
-    move: "Attitude Adjustment",
-    bio: "John Cena says 'You Can't See Me'. He was World Champion 16 times. He also helps kids through Make-A-Wish.",
-    img: "images/john-cena.jpg"
-  },
-];
+// Random fact button - index.html
+const factBtn = document.getElementById('factBtn');
+if (factBtn) {
+  const facts = [
+    "The first WrestleMania was held in 1985 at Madison Square Garden.",
+    "John Cena's finishing move is called the Attitude Adjustment.",
+    "Becky Lynch was the first woman to main event WrestleMania.",
+    "Roman Reigns' finishing move is the Spear.",
+    "The steel chair is the most used weapon in wrestling history."
+  ];
 
-// 2. Show wrestlers on the page - DOM
-const list = document.getElementById("wrestlerList");
-if(list) {
+  factBtn.addEventListener('click', () => {
+    const randomFact = facts[Math.floor(Math.random() * facts.length)];
+    document.getElementById('fact').textContent = randomFact;
+  });
+}
+
+// Load Wrestlers - wrestlers.html
+const wrestlerList = document.getElementById('wrestlerList');
+if (wrestlerList) {
+  const wrestlers = [
+    {
+      name: "Roman Reigns",
+      image: "images/roman-reigns.jpg",
+      bio: "The Tribal Chief and current face of WWE. Multiple time world champion.",
+      finisher: "Spear"
+    },
+    {
+      name: "Becky Lynch",
+      image: "images/becky-lynch.jpg",
+      bio: "The Man. First woman to main event WrestleMania and multi-time champion.",
+      finisher: "Dis-arm-her"
+    },
+    {
+      name: "John Cena",
+      image: "images/john-cena.jpg",
+      bio: "16-time world champion and wrestling legend. You can't see him.",
+      finisher: "Attitude Adjustment"
+    }
+  ];
+
   wrestlers.forEach(w => {
-    list.innerHTML += `
-      <div class="wrestler-card">
-        <img src="${w.img}" alt="${w.name}" loading="lazy">
+    wrestlerList.innerHTML += `
+      <div class="card">
+        <img src="${w.image}" alt="${w.name}">
         <h3>${w.name}</h3>
-        <p><strong>Special Move:</strong> ${w.move}</p>
-        <p>${w.bio}</p>
+        <p><b>Bio:</b> ${w.bio}</p>
+        <p><b>Finishing Move:</b> ${w.finisher}</p>
       </div>
     `;
   });
 }
 
-// 3. Conditional branching + Events + Template literals
-const factBtn = document.getElementById("factBtn");
-const facts = [
-  "Wrestling started in the 1800s as a real sport.",
-  "The Royal Rumble has 30 wrestlers.",
-  "WWE stands for World Wrestling Entertainment."
-];
-
-if(factBtn) {
-  factBtn.addEventListener("click", () => {
-    const random = Math.floor(Math.random() * facts.length);
-    document.getElementById("fact").textContent = `${facts[random]}`;
-  });
-}
-
-// 4. Form + localStorage
-const form = document.getElementById("fanForm");
-if(form) {
-  form.addEventListener("submit", (e) => {
+// Fan Club Form - fanclub.html
+const fanclubForm = document.getElementById('fanclubForm');
+if (fanclubForm) {
+  fanclubForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const name = document.getElementById("name").value;
-    localStorage.setItem("fanName", name); // localStorage
-    document.getElementById("message").textContent = `Thanks ${name}! You joined.`;
+    const name = document.getElementById('fanName').value;
+    const favorite = document.getElementById('favoriteWrestler').value;
+    // Save to localStorage - REQUIRED
+    localStorage.setItem('fanName', name);
+    localStorage.setItem('favoriteWrestler', favorite);
+    let message;
+    if (favorite) {
+      message = `we'll send you updates about ${favorite}.`;
+    } else {
+      message = `we'll send you general updates about wrestling.`;
+    }
+
+    document.getElementById('fanMessage').textContent = 
+      `Welcome to the Fan Club, ${name}! ${message}`;
+    
+    fanclubForm.reset();
   });
 }
